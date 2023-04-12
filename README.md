@@ -27,6 +27,45 @@ pip install KLogLib
 ### Features
 
 - Create Log folder/file
-- Specify max log size (GB)
+- Specify max log size (MB)
 - Zip and save 'N' last log files
+
+### Usage
+
+First of all, we have to import the library
+
+```
+from KLog.KLog import KLog
+```
+
+Once we have imported it, we have to initialize the library
+
+```
+def init_log():
+  logModel = KLog.__new__(KLog)
+
+  logModel.__init__(folder='Logs/', log_name='log.log', max_size=50, is_zip=True, max_zip=10)
+```
+
+- folder: Path where the log file will be created.
+- log_name: Name of the log file to be created.
+- max_size: Maximum size of log files (MB)
+- is_zip: Allow to create .zip files to save a backup of the log files.
+- max_zip: Maximum .zip files.
+
+The only thing left is to use the library
+
+```
+logModel.write(where='MainApplication', msg='Let`s logging', severity=KLog.LogSeverity.DEBUG)
+```
+
+- where: Method from where we are writing the log line.
+- msg: Message that we want to be written in the log file.
+- severity: Log line type, can be one of those:
+  - <img alt="Warning" src="https://img.shields.io/badge/WARNING-yellow"/>
+  - <img alt="Warning" src="https://img.shields.io/badge/DEBUG-green"/>
+  - <img alt="Warning" src="https://img.shields.io/badge/ERROR-red"/>
+  - <img alt="Warning" src="https://img.shields.io/badge/CRITICAL-red"/>
+  - <img alt="Warning" src="https://img.shields.io/badge/INFO-blue"/>
+
 
