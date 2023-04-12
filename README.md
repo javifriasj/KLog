@@ -18,3 +18,15 @@ KLog is a library which aims to bring easy logging in Python
 
 <hr>
 
+### Installation
+
+```
+pip install KLogLib
+```
+
+### Features
+
+- Create Log folder/file
+- Specify max log size (GB)
+- Zip and save 'N' last log files
+
