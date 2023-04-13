@@ -68,4 +68,12 @@ logModel.write(where='MainApplication', msg='Let`s logging', severity=KLog.LogSe
   - <img alt="Warning" src="https://img.shields.io/badge/CRITICAL-red"/>
   - <img alt="Warning" src="https://img.shields.io/badge/INFO-blue"/>
 
+<hr>
+
+Example of deleting zips
+
+
+
+https://user-images.githubusercontent.com/17411934/231798446-a4187172-878c-423a-9abd-1cf40e6c58bb.mov
+
 
